@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Happy Birthday Diya 🎂</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.9.3/confetti.browser.min.js"></script>
+<style>
+:root{--bg:#0f0a1f;--card:#1a1330;--pink:#ff6fae;--cy:#5fe3f0;--tx:#fdf6ff;--mu:#b5a9cc}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 15% 0,#2a1250 0,transparent 45%),radial-gradient(circle at 90% 60%,#08323c 0,transparent 40%),var(--bg);color:var(--tx);font:400 1rem/1.7 Poppins,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,.hand{font-family:Caveat,'Comic Sans MS',cursive;font-weight:700;line-height:1.05;margin:0}
+h2{font-size:clamp(2.2rem,7vw,3.4rem);color:var(--pink);margin-bottom:6px}
+section{max-width:860px;margin:auto;padding:80px 18px}
+.sub{color:var(--mu);margin:0 0 28px}
+button,input{font:inherit}
+button{cursor:pointer;min-height:44px}
+:focus-visible{outline:3px solid var(--cy);outline-offset:3px}
+.btn{background:var(--pink);color:#2a0a1c;border:0;border-radius:14px;padding:11px 24px;font-weight:600;box-shadow:0 5px 0 #b8386f;transition:.15s}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 #b8386f}
+.btn.alt{background:var(--cy);box-shadow:0 5px 0 #2a9aa6;color:#06262b}
+.card{background:var(--card);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:20px}
+nav{position:sticky;top:0;z-index:50;display:flex;gap:4px;justify-content:center;flex-wrap:wrap;padding:8px;background:rgba(15,10,31,.85);backdrop-filter:blur(10px)}
+nav a{color:var(--mu);text-decoration:none;padding:9px 13px;border-radius:12px;font-size:.88rem;min-height:44px;display:inline-flex;align-items:center}
+nav a.on{background:var(--card);color:var(--cy)}
+#home{text-align:center;min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+h1{font-size:clamp(3rem,13vw,6.5rem);color:var(--tx)}h1 em{font-style:normal;color:var(--pink);display:block}
+.tag{font:600 1.6rem Caveat;color:var(--cy);transform:rotate(-2deg)}
+.cd{display:flex;gap:10px;justify-content:center;margin:22px 0}.cd div{background:var(--card);border-radius:16px;padding:12px 8px;min-width:68px;border:1px solid rgba(255,255,255,.1)}
+.cd b{display:block;font:700 clamp(1.7rem,8vw,2.4rem) Caveat;color:var(--cy)}.cd i{font-style:normal;font-size:.7rem;color:var(--mu)}
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.chat{display:flex;flex-direction:column;gap:8px}.b{padding:9px 14px;border-radius:16px;max-width:85%;font-size:.92rem}.b.l{background:#2a2147;border-bottom-left-radius:4px}.b.r{background:var(--pink);color:#2a0a1c;margin-left:auto;border-bottom-right-radius:4px}
+.meter{height:14px;border-radius:9px;background:#2a2147;overflow:hidden;margin:14px 0 6px}.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cy),var(--pink));transition:width .1s}
+.phone{width:min(92vw,320px);height:560px;margin:auto;border:9px solid #000;border-radius:38px;background:#0b141a;position:relative;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.top{background:#1f2c34;padding:12px 14px;display:flex;gap:10px;align-items:center;font-size:.85rem}.top b{display:block;line-height:1.3}
+.sb{display:flex;justify-content:space-between;padding:6px 18px;font-size:.7rem;background:#1f2c34}
+.m{max-width:80%;padding:8px 12px;border-radius:10px;margin:7px 12px;font-size:.84rem;background:#202c33}.m.me{background:#005c4b;margin-left:auto}
+.lock{position:absolute;inset:0;z-index:5;background:rgba(10,6,22,.96);display:flex;flex-direction:column;justify-content:center;gap:10px;padding:24px;text-align:center;transition:opacity .7s}.lock.off{opacity:0;pointer-events:none}
+.lock h3{font:700 2rem Caveat;color:#ff6b6b;margin:0}
+.inp{width:100%;padding:12px;border-radius:12px;background:#241a40;border:1px solid #4a3a78;color:var(--tx);min-height:44px}
+#letter{display:none;white-space:pre-line;margin-top:30px;background:#fff7ec;color:#3a2a2a;font:600 1.35rem/1.6 Caveat,cursive;padding:28px;border-radius:6px;transform:rotate(-.6deg);box-shadow:0 14px 40px rgba(0,0,0,.5)}
+.cake{position:relative;width:300px;height:330px;margin:20px auto 0;transform-origin:top center;transform:scale(var(--s,1))}
+.t{position:absolute;left:50%;transform:translateX(-50%);border-radius:16px;overflow:hidden;box-shadow:0 8px 0 rgba(0,0,0,.28),inset 0 -14px 0 rgba(0,0,0,.14)}.t b{position:absolute;left:0;right:0;bottom:10px;text-align:center;font:700 2rem Caveat;color:#fff;text-shadow:0 2px 0 rgba(0,0,0,.3)}.plate{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:330px;height:34px;border-radius:50%;background:radial-gradient(#fff,#cfc3ee);box-shadow:0 10px 30px rgba(95,227,240,.4)}
+.t1{bottom:20px;width:290px;height:100px;background:#8a3a74;--f:#ff9ec8}.t2{bottom:120px;width:230px;height:96px;background:#6c46b8;--f:#fff0f8}
+.t::before{content:"";position:absolute;left:0;right:0;top:0;height:54px;background:linear-gradient(var(--f),var(--f)) 0 0/100% 26px no-repeat,radial-gradient(circle at 50% 0,var(--f) 10px,transparent 11px) 0 24px/40px 30px repeat-x}.t::after{content:"";position:absolute;inset:0;background:radial-gradient(circle,#5fe3f0 2.5px,transparent 3.5px) 8px 60px/30px 26px,radial-gradient(circle,#ffc83d 2.5px,transparent 3.5px) 22px 72px/30px 26px,radial-gradient(circle,#ff6fae 2.5px,transparent 3.5px) 14px 84px/34px 26px;opacity:.9}
+.cn{position:absolute;bottom:212px;width:44px;height:84px;background:none;border:0;padding:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end}
+.cn u{width:9px;height:40px;background:repeating-linear-gradient(#fff 0 6px,#5fe3f0 6px 12px);border-radius:3px}
+.fl{width:14px;height:24px;border-radius:50% 50% 50% 50%/65% 65% 35% 35%;background:radial-gradient(#fff,#ffc83d 55%,#ff6a00);box-shadow:0 0 16px #ffc83d;animation:fk .25s infinite alternate;transition:.5s}
+@keyframes fk{to{transform:scale(1.1,.92) rotate(4deg)}}.cn.out .fl{opacity:0;transform:scale(0);animation:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.fc{perspective:900px;height:210px;background:none;border:0;padding:0;color:inherit;text-align:left;width:100%}
+.fi{position:relative;height:100%;transition:transform .7s;transform-style:preserve-3d}.fc.flip .fi{transform:rotateY(180deg)}
+.fa,.fb{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column;justify-content:center;gap:6px;font-size:.9rem}.fb{transform:rotateY(180deg);background:#2a1d4a}
+.fa .e{font-size:2.2rem}.fa h3{font:700 1.7rem Caveat;margin:0;color:var(--cy)}
+#toasts{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:200;display:flex;flex-direction:column;gap:8px;width:min(92vw,400px)}
+.toast{background:#fff;color:#2a0a1c;padding:11px 16px;border-radius:14px;font-weight:500;font-size:.9rem;box-shadow:0 8px 24px rgba(0,0,0,.4);animation:up .3s}.toast.bad{background:#ffd9d9}
+@keyframes up{from{opacity:0;transform:translateY(16px)}}
+#mod{position:fixed;inset:0;background:rgba(5,2,15,.8);z-index:150;display:none;place-items:center;padding:16px}#mod.open{display:grid}
+#ov{position:fixed;inset:0;z-index:180;background:rgba(10,6,22,.94);display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px}#ov.on{display:flex}#ov h2{font-size:clamp(2.4rem,10vw,5rem)}
+.fl2{position:fixed;top:-30px;z-index:-1;pointer-events:none;animation:fall linear forwards}@keyframes fall{to{transform:translateY(110vh) rotate(40deg)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style></head><body>
+<nav aria-label="Sections"><a href="#home" class="on">Home</a><a href="#twin">Twin stuff</a><a href="#phone">The contact</a><a href="#cake">Cake</a><a href="#vault">Vault</a></nav>
+<div id="toasts" aria-live="polite" role="status"></div>
+<main>
+<section id="home"><p class="tag">it's finally here...</p>
+<h1>Happy Birthday <em>Deeya!</em></h1><p class="hand" style="font-size:2rem;color:var(--cy)">(aka Diya, aka Duniya Ki Sabse Achi Ladki 🤪)</p>
+<p style="max-width:520px;color:var(--mu);margin-top:14px">Another year of being iconic, chaotic, and somehow still perfectly in sync. Aaj poori duniya tumhare around ghoom rahi hai, Diya. 💗</p>
+<div id="cdw"><div class="cd" role="timer" aria-label="Countdown to Diya's birthday"><div><b id="d">0</b><i>days</i></div><div><b id="h">0</b><i>hours</i></div><div><b id="m">0</b><i>mins</i></div><div><b id="s">0</b><i>secs</i></div></div></div>
+<p class="sr-only" id="sr" aria-live="polite" style="position:absolute;left:-9999px"></p>
+<button class="btn" id="ign">Start the party 🎉</button><p style="color:var(--mu);font-size:.8rem;margin-top:16px">psst... tap the empty background 5 times fast. just saying.</p></section>
+
+<section id="twin"><h2>We literally twin at everything</h2><p class="sub">Same thoughts. Same vibes. Same reactions. And somehow everyone thinks we're dating. We are not. We're just weirdly in sync. 😭</p>
+<div class="cats">
+<div class="card"><div class="hand" style="font-size:1.8rem;color:var(--cy);margin-bottom:8px">The group chat</div><div class="chat"><div class="b l">did you just think about that??</div><div class="b r">I was literally about to text you</div><div class="b l">okay this is getting scary</div></div></div>
+<div class="card"><div class="hand" style="font-size:1.8rem;color:var(--cy);margin-bottom:8px">What people say</div><div class="chat"><div class="b l">so... are you two dating?</div><div class="b r">no 🙂</div><div class="b l">you sure?</div><div class="b r">...STOP ASKING</div></div></div>
+<div class="card"><div class="hand" style="font-size:1.8rem;color:var(--cy)">Same wavelength</div><p style="color:var(--mu);margin:6px 0 0">Vibes: identical<br>Random thoughts: suspiciously similar<br>Chaos level: we don't talk about it</p></div></div>
+<div class="card" style="margin-top:16px;text-align:center"><div class="hand" style="font-size:2rem;color:var(--pink)">Telepathy test 🔮</div><div class="meter"><i id="mt"></i></div><p id="tr" aria-live="polite" style="margin:6px 0 14px;color:var(--mu)">Press the button and see how in sync we are.</p><button class="btn alt" id="tele">Test our telepathy</button></div></section>
+
+<section id="phone"><h2>The Contact Incident 📱</h2><p class="sub">Somewhere along the way, you decided that changing your own contact name in my phone was a perfectly reasonable thing to do. Now even opening WhatsApp feels like a different dimension. Look at what she did:</p>
+<div class="phone"><div class="sb"><span id="clk"></span><span>🔋 87%</span></div>
+<div class="top"><span style="font-size:1.6rem">🤪</span><div><b>Duniya Ki Sabse Achi Ladki 🤪</b><small style="color:#6ee7a0">online</small></div></div>
+<div class="m">hehe did you see my name now 😌</div><div class="m me">DIYA. THAT IS MY PHONE.</div><div class="m">and my name is the truth 🤪</div><div class="m me">...I can't even argue 😭</div>
+<div class="lock" id="lock"><h3>⚠ Access denied</h3><p style="font-size:.9rem;margin:0">'Duniya Ki Sabse Achi Ladki' hijacked the settings. Tap below to open the secret birthday file.</p><button class="btn" id="unl">Open the secret file</button></div></div>
+<article id="letter" tabindex="-1">Dear Diya,
+
+Happy Birthday!
+
+Some friendships are normal. Ours apparently came with a built-in telepathy subscription, suspiciously similar thoughts, matching energy, and an entire population convinced there is more going on than there actually is.
+
+From matching vibes to the legendary contact-name takeover (Duniya Ki Sabse Achi Ladki 🤪, really?), you somehow make ordinary moments unexpectedly funny.
+
+Never change the wonderfully chaotic person you are. Keep laughing, keep being yourself, and keep making the world around you a little more entertaining.
+
+I hope this birthday brings you happiness, unforgettable memories, exciting surprises, and everything you have been looking forward to.
+
+You deserve an amazing year ahead.
+
+Happy Birthday, Deeya Mahajan (Diya)! 💗</article></section>
+
+<section id="cake" style="text-align:center"><h2>Blow out the candles 🕯️</h2><p class="sub">Tap every candle, Diya. Make your wishes.</p>
+<div class="cake" id="ck"><div class="plate"></div><div class="t t1"><b>Happy Birthday Diya</b></div><div class="t t2"></div></div>
+<p id="win" class="hand" style="font-size:2rem;color:var(--cy);display:none">Wishes sent. The universe has been notified. ✨</p>
+<button class="btn alt" id="rst" style="margin-top:14px">Light them again</button></section>
+
+<section id="vault"><h2>The Memory Vault 🔐</h2><p class="sub">Some memories are too iconic for a normal album. Tap a card to flip it.</p><div class="grid" id="vg"></div>
+<p style="text-align:center;color:var(--mu);margin-top:50px">Made with lots of chaos for Deeya Mahajan (Diya) 💗 Happy Birthday!</p></section>
+</main>
+<div id="mod" role="dialog" aria-modal="true" aria-labelledby="mh"><div class="card" style="width:100%;max-width:400px"><div style="display:flex;justify-content:space-between;align-items:center"><h3 id="mh" class="hand" style="font-size:2rem;color:var(--pink)">Classified 🔒</h3><button class="btn" id="mc" aria-label="Close" style="padding:4px 14px">✕</button></div><p>What is the secret phrase required to unlock the twin energy archive?</p><label for="ma" style="position:absolute;left:-9999px">Answer</label><input id="ma" class="inp" autocomplete="off" placeholder="secret phrase"><button class="btn" id="mu" style="margin-top:12px">Open</button></div></div>
+<div id="ov"><h2>Secret found! 🎉</h2><p class="hand" style="font-size:2rem;color:var(--cy)">Twin energy level: absolutely unreasonable.</p></div>
+<script>
+(()=>{
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches,MOB=innerWidth<700;
+const C=['#ff6fae','#5fe3f0','#ffffff','#ffc83d'];
+const conf=o=>{try{window.confetti&&!RM&&confetti(Object.assign({colors:C},o))}catch(e){}};
+function toast(t,bad){const b=$('#toasts');while(b.children.length>=3)b.firstChild.remove();const e=document.createElement('div');e.className='toast'+(bad?' bad':'');e.textContent=t;b.append(e);setTimeout(()=>e.remove(),3500)}
+const norm=v=>v.trim().toUpperCase(),pad=n=>String(n).padStart(2,'0');
+// countdown
+let lastM=-1;function tick(){const n=new Date(),y=n.getFullYear();let t=new Date(y,10,7);
+if(n>=t&&n<new Date(y,10,8)){$('#cdw').innerHTML='<p class="hand" style="font-size:2.6rem;color:var(--cy)">It\'s HER DAY! Celebration mode: ON 🎂</p>';clearInterval(ci);return}
+if(n>=t)t=new Date(y+1,10,7);const s=Math.max(0,Math.floor((t-n)/1e3));
+$('#d').textContent=Math.floor(s/86400);$('#h').textContent=pad(Math.floor(s%86400/3600));$('#m').textContent=pad(Math.floor(s%3600/60));$('#s').textContent=pad(s%60);
+const mn=Math.floor(s/60);if(mn!==lastM&&mn%30===0){lastM=mn;$('#sr').textContent=Math.floor(s/86400)+' days and '+Math.floor(s%86400/3600)+' hours until Diya\'s birthday'}}
+const ci=setInterval(tick,1000);tick();
+setInterval(()=>{const d=new Date();$('#clk').textContent=d.getHours()+':'+pad(d.getMinutes())},10000);{const d=new Date();$('#clk').textContent=d.getHours()+':'+pad(d.getMinutes())}
+// party
+const EM=['💗','🎉','✨','🎂','🤪'];
+function party(){[[.1,.7,60],[.9,.7,120],[.5,.5,90]].forEach(([x,y,a],i)=>setTimeout(()=>conf({particleCount:MOB?50:100,spread:80,angle:a,origin:{x,y}}),i*250));
+if(!RM)for(let i=0;i<(MOB?10:18);i++){const e=document.createElement('span');e.className='fl2';e.textContent=EM[i%5];e.style.cssText+=`left:${Math.random()*100}vw;font-size:${20+Math.random()*20}px;animation-duration:${3+Math.random()*3}s;z-index:60`;document.body.append(e);setTimeout(()=>e.remove(),6500)}
+toast('Happy Birthday Diya!! 🎉💗')}
+$('#ign').onclick=party;
+// telepathy
+let busy=0;$('#tele').onclick=()=>{if(busy)return;busy=1;$('#tr').textContent='Reading both minds... 🔮';const t0=performance.now(),bar=$('#mt');
+(function f(n){const p=Math.min(1,(n-t0)/2200);bar.style.width=p*100+'%';if(p<1)requestAnimationFrame(f);else{busy=0;$('#tr').innerHTML='<b style="color:var(--cy)">100% in sync.</b> Science cannot explain us.';conf({particleCount:70,spread:70,origin:{y:.8}});$('#tele').textContent='Test again'}})(t0)};
+// unlock
+function unlock(){{$('#lock').classList.add('off');const l=$('#letter');l.style.display='block';toast('Unlocked! Secret file opened 💌');conf({particleCount:120,spread:90,origin:{y:.6}});setTimeout(()=>l.scrollIntoView({behavior:RM?'auto':'smooth',block:'center'}),500)}}
+$('#unl').onclick=unlock;
+// cake
+const W=['keep that iconic energy.','more laughter, less drama.','may your year be amazing.','never lose the twin energy.','main character year: unlocked.'];
+$('#ck').insertAdjacentHTML('beforeend',W.map((w,i)=>`<button class="cn" data-i="${i}" style="left:${35+i*46}px" aria-label="Candle ${i+1}, blow it out"><span class="fl"></span><u></u></button>`).join(''));
+function fit(){$('#ck').style.setProperty('--s',Math.min(1,(innerWidth-30)/300));$('#ck').style.height=(330*Math.min(1,(innerWidth-30)/300))+'px'}fit();addEventListener('resize',fit);
+$('#ck').onclick=e=>{const c=e.target.closest('.cn');if(!c||c.classList.contains('out'))return;c.classList.add('out');c.disabled=true;const r=c.getBoundingClientRect();conf({particleCount:10,spread:40,startVelocity:10,scalar:.5,origin:{x:(r.left+22)/innerWidth,y:r.top/innerHeight},colors:['#aaa','#ffc83d']});toast('Wish #'+(+c.dataset.i+1)+': '+W[c.dataset.i]);
+if(!$$('.cn:not(.out)').length){conf({particleCount:200,spread:120,origin:{y:.6}});$('#win').style.display='block'}};
+$('#rst').onclick=()=>{$$('.cn').forEach(c=>{c.classList.remove('out');c.disabled=false});$('#win').style.display='none'};
+// vault
+const M=[['🤪','The Contact Takeover','The legend. She renamed herself "Duniya Ki Sabse Achi Ladki 🤪" in my phone like it was totally normal. And honestly? I never changed it.'],['🧠','Twin Telepathy','We say the same thing at the same time. Too often. It is no longer a coincidence.'],['📡','Matching Frequencies','Same vibes, same energy, same reactions. Two people, one wavelength.'],['🕵️','The Rumour Department','Everyone thinks we are dating. We are not. We are just really, really in sync.'],['🌀','Chaos Archive','No plan, no manual, just peak entertainment every single time.'],['🎂','The Birthday File','Today is all about Diya. Main character energy, activated. 💗']];
+const lk={},un=new Set();let cur=-1,lf;
+function vault(){$('#vg').innerHTML=M.map((m,i)=>{const L=lk[i]&&!un.has(i);return `<button class="fc" data-i="${i}" aria-label="${L?'Locked memory':m[1]}"><div class="fi"><div class="fa card"><span class="e">${L?'🔒':m[0]}</span><h3>${L?lk[i]:m[1]}</h3><small style="color:var(--mu)">${L?'Classified. Complete the access challenge.':'tap to flip'}</small></div><div class="fb card"><b class="hand" style="font-size:1.6rem;color:var(--pink)">${m[1]}</b>${m[2]}</div></div></button>`}).join('')}vault();
+const mod=$('#mod');function close(){mod.classList.remove('open');document.body.style.overflow='';lf&&lf.focus()}
+$('#vg').onclick=e=>{const c=e.target.closest('.fc');if(!c)return;const i=+c.dataset.i;if(lk[i]&&!un.has(i)){cur=i;lf=c;$('#ma').value='';mod.classList.add('open');document.body.style.overflow='hidden';$('#ma').focus()}else c.classList.toggle('flip')};
+function tryU(){if(norm($('#ma').value)==='TWIN_SUPREMACY'){un.add(cur);close();vault();$$('.fc')[cur].classList.add('flip');toast('Unlocked! 🔓');conf({particleCount:80,spread:70})}else toast('Nope. Think twin energy 😏',1)}
+$('#mu').onclick=tryU;$('#ma').onkeydown=e=>{if(e.key==='Enter')tryU()};$('#mc').onclick=close;mod.onclick=e=>{if(e.target===mod)close()};
+addEventListener('keydown',e=>{if(!mod.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='Tab'){const f=$$('#mod button,#mod input'),a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}});
+// nav highlight
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)$$('nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});$$('section').forEach(s=>io.observe(s));
+// five-tap egg
+let taps=[],busyE=0;addEventListener('pointerdown',e=>{if(busyE||e.target.closest('button,input,a,nav,#mod,.phone,.card,article'))return;const n=Date.now();taps=taps.filter(t=>n-t<2000);taps.push(n);if(taps.length>=5){taps=[];busyE=1;$('#ov').classList.add('on');party();conf({particleCount:200,spread:360,startVelocity:30,origin:{x:.5,y:.4}});setTimeout(()=>{$('#ov').classList.remove('on');busyE=0},3500)}});
+})();
+</script></body></html>
